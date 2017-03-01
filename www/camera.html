@@ -84,7 +84,10 @@
         destinationType: destinationType.FILE_URI,
         sourceType: source });
     }
-
+function onSuccess(imageURI) {
+    var image = document.getElementById('myImage');
+    image.src = imageURI;
+}
     // Called if something bad happens.
     //
     function onFail(message) {
