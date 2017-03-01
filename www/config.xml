@@ -1,7 +1,7 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.phonegap.ITCoordinates" version="1.0.0">
-  <name>ITCoordinates</name>
-  <description>Helping your business succeed by connecting dots in information technology</description>
-  <author href="http://www.itcoordinates.com" email="info@itcoordinates.com">ITCoordinates Team</author>
+  <name>LIBERTY LEATHER STORES</name>
+  <description>LIBERTY LEATHER STORES</description>
+  <author href="http://libertyleatherstores.com/index.php#" email="info@libertyleatherstores.com">LIBERTY LEATHER STORES</author>
   <content src="index.html"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="14"/>
