@@ -29,6 +29,21 @@
     <script src="js/exif.js"></script>
     
   </head>
+  <script type="text/javascript" charset="utf-8">
+  takePicture(){
+    Camera.getPicture({
+        destinationType: Camera.DestinationType.DATA_URL,
+        targetWidth: 1000,
+        targetHeight: 1000
+    }).then((imageData) => {
+      // imageData is a base64 encoded string
+        this.base64Image = "data:image/jpeg;base64," + imageData;
+    }, (err) => {
+        console.log(err);
+    });
+  }
+}
+</script>
   <body ng-app="starter">
     <!--
       The nav bar that will be updated as we navigate between views.
