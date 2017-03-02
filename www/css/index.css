@@ -1,114 +1,115 @@
-
-.filtr-item {
-    padding: 0em;
-    width: 33.3335%;
-    float: left;
-}
-.filtr-container {
-	width:100%;
-}
-.item-desc {
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    position: absolute;
-    text-transform: uppercase;
-    text-align: center;
-
-    z-index: 1;
-    
-}
-
-/* Filter controls */
-.simplefilter li, .multifilter li, .sortandshuffle li {
-    color: #C3C3C3;
-    cursor: pointer;
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1.1em;
-    margin: 0 0.4em;
-	letter-spacing: 1px;
-}
-.simplefilter li {
-        border:2px solid #C3C3C3;
-}
-.simplefilter li.active {
-    border: 2px solid #02C7DA;
-	color: #02C7DA;
-}
-/* Shuffle and sort controls */
-select {
-    padding: 1rem 1rem;
-    text-transform: uppercase;
-}
-.sortandshuffle .shuffle-btn {
-    background-color: #dec800;
-}
-.sortandshuffle .sort-btn {
-    background-color: #de0000;
-}
-.sortandshuffle .sort-btn.active {
-    background-color: #9d0000;
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
-/*----*/
-.filtr-item {
-    transform: scale(1) translate3d(0px, 0px, 0px);
-	-o-transform: scale(1) translate3d(0px, 0px, 0px);   
-    transition: all 0.5s ease-out 0ms;
-	-o-transition: all 0.5s ease-out 0ms;
-	transform-style: preserve-3d;
-	-o-transform-style: preserve-3d;
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
 }
 
-/*----*/
-ul.simplefilter {
-    text-align: center;
-	margin-bottom: 3em;
-}
-@media(max-width:991px){
-.filtr-item{
-	float:left;
-	width:33.33%;
-}
-.simplefilter li, .multifilter li, .sortandshuffle li {
-    padding: 10px 13px;
-    font-size: 1em;
-}
-}
-@media(max-width:768px){
-.filtr-item{
-	float:left;
-	width:50%;
-}
-.simplefilter li, .multifilter li, .sortandshuffle li {
-    padding: 8px 10px;
-    font-size: 0.9em;
-    letter-spacing: 0px;
-}
-}
-@media(max-width:600px){
-.filtr-item {
-    padding: 0em;
-}
-ul.simplefilter {
-    margin-bottom: 0em;
-}
-.simplefilter li, .multifilter li, .sortandshuffle li {
-    margin-bottom: 1em;
+/* Portrait layout (default) */
+.app {
+    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
 }
 
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
 }
-@media(max-width:414px){
-ul.simplefilter {
-    margin-bottom: 0em;
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
 }
-.filtr-item{
-	width:100%;
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
 }
-.simplefilter li, .multifilter li, .sortandshuffle li {
-    padding: 4px 4px;
-    font-size: 0.8em;
-    letter-spacing: 0px;
-    margin-bottom: 1em;
+
+.event.listening {
+    background-color:#333333;
+    display:block;
 }
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
 }
