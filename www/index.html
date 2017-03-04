@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 	  <script type="text/javascript" src="cordova.js"></script>
+	  <script type="text/javascript" src="js/SocialSharing.js"></script>
     <title></title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
@@ -44,21 +45,7 @@
     });
   }
 }
-</script>
-	<script type="text/javascript" charset="utf-8">
-		if ( ionic.Platform.isAndroid() ) {
-       window.canvas2ImagePlugin.saveImageDataToLibrary(
-                      function(msg){
-                          alert("Photo Saved!");
-                      }, 
-                      function(err){
-                          alert(err);
-                      }, 
-                      'myCanvas'
-                  );
-}
-		
-	</script>
+
   <body ng-app="starter">
     <!--
       The nav bar that will be updated as we navigate between views.
