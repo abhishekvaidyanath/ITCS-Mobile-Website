@@ -46,18 +46,18 @@
 }
 </script>
 	<script type="text/javascript" charset="utf-8">
-		function onDeviceReady()
-{
-    window.canvas2ImagePlugin.saveImageDataToLibrary(
-        function(msg){
-            console.log(msg);
-        },
-        function(err){
-            console.log(err);
-        },
-        document.getElementById('myCanvas')
-    );
+		if ( ionic.Platform.isAndroid() ) {
+       window.canvas2ImagePlugin.saveImageDataToLibrary(
+                      function(msg){
+                          alert("Photo Saved!");
+                      }, 
+                      function(err){
+                          alert(err);
+                      }, 
+                      'myCanvas'
+                  );
 }
+		
 	</script>
   <body ng-app="starter">
     <!--
