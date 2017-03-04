@@ -23,7 +23,7 @@
   <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1"/>
    <plugin name="cordova-plugin-media-capture" source="npm" spec="~1.2.0"/>
   <plugin name="cordova-plugin-media" source="npm" spec="~2.2.0"/>
- 
+<plugin name="cordova-plugin-socialsharing" source="npm" version="4.3.81" />
   
   <platform name="android">
     <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
